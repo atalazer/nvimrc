@@ -1,0 +1,15 @@
+priority 100
+
+snippet _metadata "add YAML metadata"
+	---
+	author: Atalariq Barra Hadinugraha
+	date: `strftime("%Y-%m-%d")`
+	tag: ${0:tag}
+	publish: false
+	---
+
+snippet _qna "Add Question callout"
+	> [!QUESTION]- ${1:question} ?
+	> ${0:content}
+	> > [!NOTE]- Referensi:
+	> > - ini referensi

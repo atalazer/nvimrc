@@ -1,0 +1,57 @@
+priority 100
+
+snippet _shebang "Add lua shebang"
+	#!/usr/bin/env lua
+	$1
+
+snippet _vim "Fold marker"
+	# vim: foldenable foldmethod=marker:
+
+snippet local "Local variable"
+	local ${1:x} = ${0:1}
+
+snippet fun "function"
+	function ${1:fname}(${2:...})
+		${0:-- body}
+	end
+
+snippet for "For loop"
+	for ${1:i}=${2:1},${3:10} do
+		${0:print(i)}
+	end
+snippet forp "For loop pairs"
+	for ${1:i},${2:v} in pairs(${3:table_name}) do
+		${0:-- body}
+	end
+snippet fori "For loop index pairs"
+	for ${1:i},${2:v} in ipairs(${3:table_name}) do
+		${0:-- body}
+	end
+snippet if "If condition"
+	if ${1:condition} then
+		${2:-- body}
+	end
+snippet ife "If-else condition"
+	if ${1:condition} then
+		${2:-- if condition}
+	else
+		${0:-- else}
+	end
+
+snippet elif "Else-if condition"
+	elseif ${1:condition} then
+		${0:--body}
+
+snippet while "While loop"
+	while ${1:condition} do
+		${0:--body}
+	end
+
+snippet print "Print"
+	print("${1:string}")
+
+snippet im "import"
+	import "${1:import file}"
+
+snippet req "Require module"
+	require('${1:module}')

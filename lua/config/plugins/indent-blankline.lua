@@ -1,0 +1,30 @@
+return {
+    'lukas-reineke/indent-blankline.nvim',
+    opts = {
+        indentLine_enabled = 1,
+        char = '│',
+        space_char_blankline = ' ',
+        show_first_indent_level = false,
+        show_trailing_blankline_indent = false,
+        show_current_context = true,
+        show_current_context_start = true,
+
+        buftype_exclude = { 'terminal', 'nofile' },
+        filetype_exclude = {
+            'help',
+            'terminal',
+            'lazy',
+            'lspinfo',
+            'TelescopePrompt',
+            'TelescopeResults',
+            'mason',
+            'nvdash',
+            'nvcheatsheet',
+            'neogitstatus',
+            'NvimTree',
+            'neo-tree',
+            'Trouble',
+            '',
+        },
+    },
+}

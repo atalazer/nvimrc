@@ -1,0 +1,33 @@
+priority 100
+
+snippet main "Main"
+	#include <iostream>
+	using namespace std;
+	int main(){
+		${0:cout << "Hello, world" << endl;}
+		return 0;
+	}
+
+snippet cmain "Main template for competitive programming"
+	#include <bits/stdc++.h>
+	using namespace std;
+
+	int main(){
+		${0:cout << "Hello, world" << endl;}
+	}
+
+snippet for "For loop"
+	for (${1:int i = 0}; ${2:i<10}; ${3:i++}) {
+		${0:cout << i << endl;}
+	}
+
+snippet foreach "for-each loop"
+	for (${1:int} ${2:i} : ${3:array}) {
+		${0:cout << i <<endl;}
+	}
+
+snippet cout "display/show output to screen"
+	cout << ${0:"Hello, world!"} << endl;
+
+snippet print "display/show output to screen"
+	cout << ${0:"Hello, world!"} << endl;
