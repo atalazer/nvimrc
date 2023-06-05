@@ -118,19 +118,15 @@ return {
             cpp = {
                 exec = 'g++',
                 args = {
-                    '-O2',
+                    '-std=c++17',
                     '-Wall',
                     '-Wextra',
+                    '-Wshadow',
+                    '-O2',
                     '$(FNAME)',
                     '-o',
                     '$(FNOEXT)',
                 },
-                -- exec = 'clang++',
-                -- args = {
-                --     '$(FNAME)',
-                --     '-o',
-                --     '$(FNOEXT)',
-                -- }
             },
         },
         run_command = { cpp = { exec = './$(FNOEXT)' }, args = { '&&', 'rm', './$(FNOEXT)' } },
